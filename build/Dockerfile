@@ -31,7 +31,7 @@ ADD cache-warm /work/cache-warm
    
 # Setup directory and Set perms for app root
 RUN set -x \
-  && chmod 755 /work \    
+  && chmod -R 755 /work \    
   && chown -R deploy:deploy /work  
   
   

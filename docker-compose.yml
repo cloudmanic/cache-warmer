@@ -3,7 +3,7 @@ version: '2.1'
 services:
 
   # App
-  backend-dev:
+  web:
            
     hostname: ${COMPOSE_PROJECT_NAME}
 
@@ -19,9 +19,11 @@ services:
     image: ${COMPOSE_PROJECT_NAME}/golang:1.8.1-alpine           
 
     restart: ${RESTART}
-    
+
     environment:   
       VIRTUAL_HOST: ${VIRTUAL_HOST} 
+      LETSENCRYPT_HOST: ${LETSENCRYPT_HOST}
+      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL} 
                       
     networks:
       - shared     
