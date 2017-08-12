@@ -6,6 +6,8 @@ The goal of this project is to rebuild a cache from varnish or nginx cache from 
 
 Simply post your shared key, and the url to the sitemap that you want to cache warm.
 
+```curl -H "Content-Type: application/json" -X POST -d '{"token": "<ChangeMe>","sitemap": "https://somesite.com/sitemap.xml"}' http://cache-warm.yourdomain.com```
+
 ![https://www.evernote.com/l/ABvO9A_KZkRCD4-bI98iHcjj-gD6nu8Dh8UB/image.png](https://www.evernote.com/l/ABvO9A_KZkRCD4-bI98iHcjj-gD6nu8Dh8UB/image.png)
 
 # Docker
